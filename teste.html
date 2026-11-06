@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório Executivo - Tuotempo | Doctoralia</title>
+    <style>
+        :root {
+            --doc-teal: #00B39B;
+            --doc-teal-light: #E5F7F5;
+            --doc-blue: #071A28;
+            --doc-gray: #7A8D9C;
+            --doc-light-gray: #F4F7F9;
+            --doc-danger: #FF5A5F;
+            --doc-warning: #FFB100;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--doc-light-gray);
+            color: var(--doc-blue);
+        }
+
+        header {
+            background-color: var(--doc-teal);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        header p {
+            margin: 0.5rem 0 0 0;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--doc-teal);
+        }
+
+        .card h2 {
+            color: var(--doc-blue);
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .metric-box {
+            background: var(--doc-teal-light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .metric-box h3 {
+            margin: 0;
+            font-size: 2rem;
+            color: var(--doc-teal);
+        }
+
+        .metric-box p {
+            margin: 0.5rem 0 0 0;
+            color: var(--doc-gray);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .insights {
+            background-color: #F8FAFC;
+            border-left: 4px solid var(--doc-warning);
+            padding: 1rem 1.5rem;
+            margin-top: 1.5rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .insights h4 {
+            margin: 0 0 0.5rem 0;
+            color: var(--doc-blue);
+        }
+
+        .insights ul {
+            margin: 0;
+            padding-left: 1.5rem;
+            color: #475569;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin-top: 1rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #E2E8F0;
+        }
+
+        th {
+            background-color: var(--doc-light-gray);
+            color: var(--doc-gray);
+            font-weight: 600;
+        }
+
+        /* Simulação de barras de progresso/gráficos */
+        .bar-chart {
+            margin: 1rem 0;
+        }
+        
+        .bar-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .bar-label {
+            width: 120px;
+            font-size: 0.9rem;
+            color: var(--doc-gray);
+        }
+
+        .bar-wrap {
+            flex: 1;
+            background: #E2E8F0;
+            border-radius: 4px;
+            height: 20px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background: var(--doc-teal);
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 10px;
+            color: white;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .bar-fill.whatsapp { background: #FBBF24; }
+        .bar-fill.email { background: #60A5FA; }
+        .bar-fill.sms { background: #F87171; }
+
+        .roi-badge {
+            display: inline-block;
+            background: var(--doc-teal);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Relatório Executivo de Performance</h1>
+        <p>Módulos Tuotempo - Análise de Engajamento e Autonomia (Base: 2026)</p>
+    </header>
+
+    <div class="container">
+
+        <!-- 1. Aquisição de Pacientes -->
+        <div class="card">
+            <h2>1. Aquisição de Pacientes (Auto Registro)</h2>
+            <p>Evolução da base de pacientes que acessam o ambiente online por conta própria, refletindo a digitalização da clínica.</p>
+            
+            <div class="metrics-grid">
+                <div class="metric-box">
+                    <h3>24.161</h3>
+                    <p>Novos Registros em 2026 (YTD)</p>
+                </div>
+                <div class="metric-box">
+                    <h3>28.655</h3>
+                    <p>Pico Histórico Anual (2025)</p>
+                </div>
+                <div class="metric-box" style="background-color: #FFFBEB;">
+                    <h3 style="color: var(--doc-warning);">+950%</h3>
+                    <p>Crescimento desde o início (2020 vs 2026)</p>
+                </div>
+            </div>
+
+            <div class="insights">
+                <h4>🎯 Insights e Ações Recomendadas</h4>
+                <ul>
+                    <li><strong>Adoção Digital Consolidada:</strong> A clínica saiu de 2,2 mil registros em 2020 para uma média superior a 24 mil nos últimos anos. O paciente já compreende e prefere o ambiente online.</li>
+                    <li><strong>Ponto de Otimização:</strong> O ano de 2026 apresenta uma leve retração (-16%) em relação a 2025. É o momento ideal para rodar uma <strong>campanha de marketing multicanal (SMS/WhatsApp)</strong> para a base antiga que ainda agenda via telefone, incentivando o primeiro acesso ao portal.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 2. Agendamentos Online -->
+        <div class="card">
+            <h2>2. Agendamentos Online</h2>
+            <div class="roi-badge">ROI: Alta previsibilidade de agenda e redução de atrito</div>
+            <p>Análise de volume de marcações, canais de entrada e performance por unidade no ano corrente (2026).</p>
+
+            <div class="metrics-grid">
+                <div class="metric-box">
+                    <h3>~6.000</h3>
+                    <p>Média de Agendamentos/Mês (2026)</p>
+                </div>
+                <div class="metric-box">
+                    <h3>96%</h3>
+                    <p>Agendamentos via Web (Sem App)</p>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <p><strong>Top 3 Unidades em Volume (Ref: Set/2026)</strong></p>
+                <table>
+                    <tr>
+                        <th>Unidade</th>
+                        <th>Volume Médio Mensal</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>Batel Premium - 07</td>
+                        <td>~1.600 marcações</td>
+                        <td style="color: var(--doc-teal); font-weight: bold;">Unidade Âncora</td>
+                    </tr>
+                    <tr>
+                        <td>Praça Zacarias - 03</td>
+                        <td>~1.400 marcações</td>
+                        <td style="color: var(--doc-teal); font-weight: bold;">Alta Performance</td>
+                    </tr>
+                    <tr>
+                        <td>Carmo - 01</td>
+                        <td>~530 marcações</td>
+                        <td style="color: var(--doc-gray);">Estável</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="insights">
+                <h4>🎯 Insights e Ações Recomendadas</h4>
+                <ul>
+                    <li><strong>Predominância do Canal Web:</strong> A esmagadora maioria dos agendamentos ocorre via "Online Bookings (No APP)". Há uma oportunidade gigantesca não explorada em <strong>Apps Móveis (iOS/Android)</strong>, que aumentam a fidelização e reduzem custos de SMS através de Push Notifications.</li>
+                    <li><strong>Queda Atípica em Agosto:</strong> O gráfico mostra uma queda acentuada em Agosto (~2.885 marcações contra ~6.000 nos demais meses). É necessário investigar se houve indisponibilidade de agenda médica, falha sistêmica ou sazonalidade agressiva.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 3. Cancelamentos e Reagendamentos -->
+        <div class="card">
+            <h2>3. Cancelamentos e Reagendamentos (Autonomia)</h2>
+            <div class="roi-badge">ROI: Redução drástica de chamadas no Call Center</div>
+            <p>O foco desta métrica é validar o tempo economizado da equipe de recepção através do self-service do paciente.</p>
+
+            <div class="bar-chart">
+                <p><strong>Origem dos Cancelamentos (2026)</strong></p>
+                <div class="bar-row">
+                    <div class="bar-label">Autônomos (53%)</div>
+                    <div class="bar-wrap">
+                        <div class="bar-fill" style="width: 53%;">Link (12%) + Portal (11%) + WhatsApp (29%)</div>
+                    </div>
+                </div>
+                <div class="bar-row">
+                    <div class="bar-label">Recepção (47%)</div>
+                    <div class="bar-wrap">
+                        <div class="bar-fill" style="width: 47%; background: var(--doc-gray);">Via Call Center / Unidade</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-box">
+                    <h3>97%</h3>
+                    <p>Reagendamentos feitos pelo Paciente (Self-service)</p>
+                </div>
+                <div class="metric-box">
+                    <h3 style="color: var(--doc-danger);">15:1</h3>
+                    <p>Proporção: Cancelamentos vs Reagendamentos</p>
+                </div>
+            </div>
+
+            <div class="insights">
+                <h4>🎯 Insights e Ações Recomendadas</h4>
+                <ul>
+                    <li><strong>Autonomia é Sucesso:</strong> 97% dos reagendamentos e 53% dos cancelamentos são feitos sem interação humana. Considerando um TMO (Tempo Médio de Operação) de 3 minutos por ligação, <strong>economizou-se centenas de horas operacionais mensais</strong> da equipe de atendimento.</li>
+                    <li><strong>Alerta de Retenção:</strong> O volume de cancelamentos absolutos (~2.500 a 3.100/mês) é muito maior que o de reagendamentos (~150/mês). 
+                    <br><br><em>Ação:</em> Configurar o fluxo de mensagens (WhatsApp/Email) para que, ao cancelar, o paciente receba imediatamente um <strong>botão/link sugerindo novas datas para reagendamento</strong>, focando em reter a consulta.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 4. Mensageria x Créditos -->
+        <div class="card">
+            <h2>4. Mensageria x Consumo de Créditos</h2>
+            <div class="roi-badge">ROI: Engajamento vs Custo de Comunicação</div>
+            <p>Análise dos canais de envio de lembretes e campanhas.</p>
+
+            <div class="bar-chart">
+                <p><strong>Distribuição de Mensagens por Canal</strong></p>
+                <div class="bar-row">
+                    <div class="bar-label">WhatsApp</div>
+                    <div class="bar-wrap"><div class="bar-fill whatsapp" style="width: 61.84%;">61.84%</div></div>
+                </div>
+                <div class="bar-row">
+                    <div class="bar-label">E-mail</div>
+                    <div class="bar-wrap"><div class="bar-fill email" style="width: 27.18%;">27.18% (Custo Zero)</div></div>
+                </div>
+                <div class="bar-row">
+                    <div class="bar-label">SMS</div>
+                    <div class="bar-wrap"><div class="bar-fill sms" style="width: 10.98%;">10.98%</div></div>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <p><strong>Relação Mensagens x Créditos (Amostra 2026)</strong></p>
+                <table>
+                    <tr>
+                        <th>Mês</th>
+                        <th>Mensagens Enviadas</th>
+                        <th>Créditos Consumidos</th>
+                        <th>Custo Médio (Crédito/Msg)</th>
+                    </tr>
+                    <tr>
+                        <td>Março/2026</td>
+                        <td>150.946</td>
+                        <td>160.948</td>
+                        <td>~1.06</td>
+                    </tr>
+                    <tr>
+                        <td>Agosto/2026</td>
+                        <td>105.002</td>
+                        <td>139.449</td>
+                        <td>~1.32</td>
+                    </tr>
+                    <tr>
+                        <td>Setembro/2026</td>
+                        <td>105.527</td>
+                        <td>148.563</td>
+                        <td>~1.40</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="insights">
+                <h4>🎯 Insights e Ações Recomendadas</h4>
+                <ul>
+                    <li><strong>Preferência por WhatsApp:</strong> Com quase 62% dos envios, o WhatsApp é o canal principal. O paciente lê e engaja mais. O E-mail atua bem como canal de apoio sem custo de crédito.</li>
+                    <li><strong>Otimização de Créditos:</strong> Nota-se que o consumo de créditos é de cerca de 1.1 a 1.4 créditos por mensagem enviada. Isso ocorre porque mensagens de WhatsApp/SMS que excedem o limite de caracteres ou janelas de 24h cobram créditos adicionais.</li>
+                    <li><strong>Plano de Ação:</strong> Revisar os templates (templates HSM de WhatsApp e textos de SMS). Encurtar os textos de lembrete e focar em mensagens objetivas para <strong>trazer a proporção de crédito por mensagem o mais próximo possível de 1:1</strong>, gerando economia imediata no pacote contratado.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
+```eof
